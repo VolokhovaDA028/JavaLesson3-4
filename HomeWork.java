@@ -4,12 +4,24 @@ public class HomeWork {
 
     public static void main(String[] args) {
 
-        int[] arr1 = new int[]{1, 0, 1, 0, 1, 1, 1};
-        printBinaryArray(arr1);
+        //int[] arr1 = new int[]{1, 0, 1, 0, 1, 1, 1};
+        //printBinaryArray(arr1);
 
-        printArraySize100(100);
+        //printArraySize100(100);
+
+        int[] arr2 = { 1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
+        printArrayByTwo(arr2);
+
+    }
+
+    public static void printArrayByTwo(int[] arr2) {
+        for (int i = 0; i < arr2.length; i++) {
+            if (arr2[i] < 6){
+                arr2[i] = arr2[i] * 2;
+            }
+            System.out.print(arr2[i] + " ");
         }
-
+    }
         public static void printArraySize100(int size) {
             int[] arr = new int[size];
 
@@ -19,7 +31,6 @@ public class HomeWork {
             }
 
         }
-
         public static void printBinaryArray(int[] arr1) {
             for(int i = 0; i < arr1.length; ++i) {
                 if (arr1[i] == 0) {
