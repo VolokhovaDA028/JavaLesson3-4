@@ -1,5 +1,7 @@
 package ru.geekbrains.New1.Lesson3;
 
+import java.util.Random;
+
 public class HomeWork {
 
     public static void main(String[] args) {
@@ -21,10 +23,41 @@ public class HomeWork {
         };
         printArray2DForUnit(arr3);      */
 
-        lenAndInitialValue(5,25);
+    //  lenAndInitialValue(5,25);
 
-
+      /*  //int[] arr = MyArray.makeArrayWithRandomValues(15);
+        //MyArray.printArray(arr);
+        int[] arr = new int[5];
+        Random random = new Random();
+        for(int i = 0; i < arr.length; ++i) {
+            arr[i] = random.nextInt();
+        }
+        return arr;*/
+        int[] arr5 = { 1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
+        minMax(arr5);
     }
+
+
+
+    public static void minMax( int[] arr){
+
+        int max = arr[0];
+        int min = arr[0];
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] < min) {
+                min = arr[i];
+            }
+        }
+        System.out.println(max);
+        System.out.println(min);
+    }
+
 
         public static void lenAndInitialValue(int len, int initialValue){
         int[] arr4 = new int[len];
