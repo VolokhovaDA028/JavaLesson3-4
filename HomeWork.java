@@ -9,12 +9,36 @@ public class HomeWork {
 
         //printArraySize100(100);
 
-        int[] arr2 = { 1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
-        printArrayByTwo(arr2);
+        //int[] arr2 = { 1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
+        //printArrayByTwo(arr2);
+
+        int [][] arr3 = {
+                {1, 2, 3, 4, 5},
+                {1, 2, 3, 4, 5},
+                {1, 2, 3, 4, 5},
+                {1, 2, 3, 4, 5},
+                {1, 2, 3, 4, 5},
+        };
+        printArray2DForUnit(arr3);
+
 
     }
 
-    public static void printArrayByTwo(int[] arr2) {
+    public static void printArray2DForUnit(int[][] arr) {
+        for(int y = 0; y < arr.length; ++y) {
+            for(int x = 0, i = arr[y].length; x < arr[y].length; ++x, --i) {
+                if (x == y || y == i - 1) {
+                    arr[y][x]=1;
+                }
+                System.out.print(arr[y][x] + " ");
+            }
+            System.out.println();
+        }
+
+    }
+
+
+        public static void printArrayByTwo(int[] arr2) {
         for (int i = 0; i < arr2.length; i++) {
             if (arr2[i] < 6){
                 arr2[i] = arr2[i] * 2;
