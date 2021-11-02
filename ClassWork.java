@@ -26,7 +26,6 @@ public class ClassWork {
             double d = scanner.nextDouble();
             System.out.println(d);
         }
-
         private static void castExample() {
             //НЕ явное приведение типов
             byte b = 120;
@@ -39,7 +38,6 @@ public class ClassWork {
 
             System.out.println(b);
         }
-
         private static void randomExample() {
             int[] arr = MyArray.makeArrayWithRandomValues(15);
             MyArray.printArray(arr);
@@ -57,7 +55,6 @@ public class ClassWork {
             System.out.println(intFromDouble);
             Math.random();
         }
-
         private static void arrayUtils() {
             String[] arr = {
                     "Ji",
@@ -77,7 +74,6 @@ public class ClassWork {
             });
             System.out.println(Arrays.toString(arr));
         }
-
         private static void arrays2D() {
             int[][] arr = new int[3][];
             arr[0] = new int[3]; //не регулярный массив
@@ -102,7 +98,6 @@ public class ClassWork {
             //Arrays.deepEquals() - сравнение массивов на одинаковость
             //Arrays.fill() - заполнить массив одним значением
         }
-
         private static void linearArr() {
             int[] arr = {1, 2, 3, 4, 5, 6, 7};
             MyArray.printArray(arr);
