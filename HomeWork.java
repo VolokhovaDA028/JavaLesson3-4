@@ -6,13 +6,13 @@ public class HomeWork {
 
     public static void main(String[] args) {
 
-    //    int[] arr1 = new int[]{1, 0, 1, 0, 1, 1, 1};
-    //    printBinaryArray(arr1);
+        //    int[] arr1 = new int[]{1, 0, 1, 0, 1, 1, 1};
+        //    printBinaryArray(arr1);
 
-    //    printArraySize100(100);
+        //    printArraySize100(100);
 
-    //    int[] arr2 = { 1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
-    //    printArrayByTwo(arr2);
+        //    int[] arr2 = { 1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
+        //    printArrayByTwo(arr2);
 
     /*    int [][] arr3 = {
                 {1, 2, 3, 4, 5},
@@ -22,24 +22,39 @@ public class HomeWork {
                 {1, 2, 3, 4, 5},
         };
         printArray2DForUnit(arr3);      */
+        //  lenAndInitialValue(5,25);
 
-    //  lenAndInitialValue(5,25);
+        //   int[] arr5 = { 1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
+        //   minMax(arr5);
 
-      /*  //int[] arr = MyArray.makeArrayWithRandomValues(15);
-        //MyArray.printArray(arr);
-        int[] arr = new int[5];
-        Random random = new Random();
-        for(int i = 0; i < arr.length; ++i) {
-            arr[i] = random.nextInt();
+        int[] arr6 = new int[10];
+        for (int i = 0; i < arr6.length; i++) {
+            arr6[i] = (int) Math.round((Math.random() * 30) - 15);
+            System.out.print(arr6[i] + " ");
         }
-        return arr;*/
-        int[] arr5 = { 1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
-        minMax(arr5);
+        summArray(arr6);
+
+
     }
-
-
-
-    public static void minMax( int[] arr){
+        public static boolean summArray ( int[] arr6){
+            int rightSum = 0;
+            int leftSum = 0;
+            // Нахожу сумму всех элементов
+            for (int i = 0; i < arr6.length; i++) {
+                rightSum += arr6[i];
+            }
+            //Перебираю сумму с начала массива и сравниваю с разницей (правой частью)
+            for (int i = 0; i < arr6.length; i++) {
+                leftSum += arr6[i];
+                if (leftSum == rightSum - leftSum) {
+                    System.out.println("true");
+                    return true;
+                }
+            }
+            System.out.println("false");
+            return false;
+        }
+        public static void minMax( int[] arr){
 
         int max = arr[0];
         int min = arr[0];
@@ -57,8 +72,6 @@ public class HomeWork {
         System.out.println(max);
         System.out.println(min);
     }
-
-
         public static void lenAndInitialValue(int len, int initialValue){
         int[] arr4 = new int[len];
         for (int i = 0; i < len; i++) {
